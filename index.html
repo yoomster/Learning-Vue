@@ -23,7 +23,7 @@
       <a :href="url">my github</a>
       <div v-if="showBooks">
         <ul>
-          <li v-for="item in books">
+          <li v-for="item in books" :class="{fav: item.isFave}">
             <img :src="item.img" :alt="item.title">
             <h3>{{item.title}}, {{item.author}}</h3>
           </li>
