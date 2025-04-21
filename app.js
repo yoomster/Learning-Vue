@@ -1,30 +1,30 @@
 const app = Vue.createApp({
   data() {
     return {
+      url: "https://github.com/yoomster",
       showBooks: true,
-      title: "The Final Empire",
-      author: "Brandon Sanderson",
-      age: 50,
-      y: 0,
-      x: 0,
+      books: [
+        {
+          title: "The Final Empire",
+          author: "Brandon Sanderson",
+          img: "assets/The Final Empire.jpg",
+        },
+        {
+          title: "The Way Of Kings",
+          author: "Brandon Sanderson",
+          img: "assets/The Way Of Kings.jpg",
+        },
+        {
+          title: "Name Of The Wind",
+          author: "Patrick Rothfuss",
+          img: "assets/Name Of The Wind.jpg",
+        },
+      ],
     };
   },
   methods: {
-    changeTitle(title) {
-      this.title = title;
-    },
     toggleShowBooks() {
       this.showBooks = !this.showBooks;
-    },
-    handleEvent(e, data) {
-      console.log(e, e.type);
-      if (data) {
-        console.log(data);
-      }
-    },
-    handleMouseMove(e) {
-      this.y = e.offsetY;
-      this.x = e.offsetX;
     },
   },
 });
