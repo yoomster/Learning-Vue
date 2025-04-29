@@ -38,7 +38,7 @@
       <!-- <a :href="url">my github</a> -->
       <div v-if="showBooks">
         <ul>
-          <li v-for="item in books" :class="{fav: item.isFav}">
+          <li v-for="item in filteredBooks" @click="toggleIsFav(item)" :class="{fav: item.isFav}">
             <img :src="item.img" :alt="item.title">
             <h3>{{item.title}} </h3>
             <p>{{item.author}}</p>
